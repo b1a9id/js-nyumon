@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+    <h2>Standerd Revival MP3</h2>
+    <div id="list">
+        
+    </div>
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+    <script>
+        var addZero = function(num, digit) {
+            var numStr = String(num);
+            while(numStr.length < digit) {
+                numStr = '0' + numStr;
+            }
+            return numStr;
+        }
+        
+        var songs = [
+            'test1',
+            'testtest2', 
+            'sample3'
+        ];
+        for (var i = 0; i < songs.length;i++) {
+            var paragraph = document.createElement('p');
+            paragraph.textContent = addZero(i + 1, 2) + '. ' +songs[i];
+            document.getElementById('list').appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>
